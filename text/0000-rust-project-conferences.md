@@ -23,14 +23,14 @@ Common baseline expectations are:
 
 The Rust teams intend to support the conference organisers these offers.
 
-It is _not_ the intention of this RFC to standardize conferences, there will always be conferences focussed on specific topics or organised in a different fashion outside of this framework and the Rust project to support them to the extend possible.
+It is _not_ the intention of this RFC to standardize conferences, there will always be conferences focused on specific topics or organised in a different fashion outside of this framework and the Rust project should aim to support them to the extend possible.
 
 # Detailed design
 [design]: #detailed-design
 
 ## Contact
 
-Events interested as being official Rust project events should apply through a mail to the community team or the core team.
+Events interested as being official Rust project events should apply through a mail to the [community team](mailto:community-team@rust-lang.org) or the [core team](mailto:core-team@rust-lang.org).
 
 ## Rust project involvement
 
@@ -91,7 +91,7 @@ TODO: sum up how this makes it easier for the Rust project to promote everything
 
 The Rust project cannot - at the moment - commit to monetary support. It will attempt that some costs directly stemming from the wishes of the Rust project - especially speaker costs - are covered.
 
-Monetary support can come either through the Rust project directly or through associated, local, funding organisations.
+Monetary support can come either through the Rust project directly or through associated local funding organisations.
 
 # Drawbacks
 [drawbacks]: #drawbacks
