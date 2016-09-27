@@ -98,7 +98,7 @@ Monetary support can come either through the Rust project directly or through as
 
 People might feel put off by the rules and not want to be involved officially.
 
-There's no documentation yet how events that don't meet those criteria will be featured (e.g. because they have very specialised content).
+There's no documentation how events that don't meet those criteria will be featured (e.g. because they have very specialised content).
 
 # Alternatives
 [alternatives]: #alternatives
@@ -108,7 +108,9 @@ There would still be no rules for what's necessary to become an official Rust co
 # Unresolved questions
 [unresolved]: #unresolved-questions
 
-What parts of the design are still TBD?
+Should we have opinions on pricing?
+
+Who would handle disagreements?
 
 # Acknowledegements
 
