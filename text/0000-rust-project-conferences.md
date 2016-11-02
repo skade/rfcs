@@ -11,36 +11,36 @@ This RFC formulates base rules for conferences that want to be official Rust pro
 # Motivation
 [motivation]: #motivation
 
-The Rust project intends to provide as many people as possible with knowledge and insights about what is happening in Rust. For this, it intends to cooperate with organisations all over the world to organise conferences where people can get authoriative knowledge. This means that certain baseline conditions must be met to make sure the can be efficiently promoted and attendees can have a common expectation about them. The motivation of this RFC is to clarify them.
+The Rust project intends to provide as many people as possible with knowledge and insights about what is happening in Rust. For this, it intends to cooperate with organisations all over the world to organise conferences where people can get authoriative knowledge. This means that certain baseline conditions must be met to make sure the conferences can be efficiently promoted and attendees can have a common expectation about them. The motivation of this RFC is to clarify these expectations.
 
 Common baseline expectations are:
 * A representation of the Rust project at the conference
-* Some alignment in theme of current developments in the Rust scene
+* Some alignment between the conference's theme and current developments in the Rust scene
 * Being open to beginners and newcomers in content and action
 * An actionable Code of Conduct and procedures
 * An accessible environment with clear documentation
 * Include offers for newcomers, for example workshops
 
-The Rust teams intend to support the conference organisers these offers.
+The Rust teams intend to support the conference organisers in providing these offers.
 
-It is _not_ the intention of this RFC to standardize conferences, there will always be conferences focused on specific topics or organised in a different fashion outside of this framework and the Rust project should aim to support them to the extend possible.
+It is _not_ the intention of this RFC to standardize conferences, there will always be conferences focused on specific topics or organised in a different fashion outside of this framework and the Rust project should aim to support them to the extent possible.
 
 # Detailed design
 [design]: #detailed-design
 
 ## Contact
 
-Events interested as being official Rust project events should apply through a mail to the [community team](mailto:community-team@rust-lang.org) or the [core team](mailto:core-team@rust-lang.org).
+Events interested in being official Rust project events should apply through a mail to the [community team](mailto:community-team@rust-lang.org) or the [core team](mailto:core-team@rust-lang.org).
 
 ## Rust project involvement
 
-The Rust project needs to have some representation at the conference. This gives attendees direct access to people that can showcase recent developments and future goals appropriately. The Rust project should also be consulted about the general guiding theme of the conference.
+The Rust project needs to have some representation at the conference. This gives attendees direct access to people who can showcase recent developments and future goals appropriately. The Rust project should also be consulted about the general guiding theme of the conference.
 
-To ensure this, one keynote slot should be kept free for a speaker to be assigned by the Rust project. If the topic of the talk is not keynote material (e.g. a very detailed explanation of a technical aspect), a talk slot of similar size should be reserved. The Rust project has to make a proposal for the slot. The event is free to deny the talk when it feels the proposal does not match the overall quality of the rest of the event. The Rust project is then free to send in additional proposals.
+To ensure sufficient project involvement, one keynote slot should be kept free for a speaker to be assigned by the Rust project. If the topic of the talk is not keynote material (e.g. a very detailed explanation of a technical aspect), a talk slot of similar size should be reserved. The Rust project has to make a proposal for the slot. The event is free to deny the talk if it feels the proposal does not match the overall quality of the rest of the event, in which case the Rust project is then free to send in additional proposals.
 
 ## Content
 
-Events on the official Rust project conference cycle should be accessible for attendees of all skill levels. Selecting a program with a range of difficulty levels is important. Talks should be marked by difficulty level in the relevant material.
+Events on the official Rust project conference cycle should be accessible for attendees of all skill levels. Selecting a program with a range of difficulty levels is important. The conference's program and other material should clearly indicate each talk's difficulty level.
 
 ## Training
 
@@ -52,20 +52,20 @@ Outreach workshops should be for free.
 
 Conferences that partner directly with the Rust project should have the following policies in place:
 
-* An actionable Code of Conduct, fit for a conference and in faith with the Rust Projects Code of Conduct.
-* A clear accessiblity statement, giving infos about services in place and venue details, along with procedures to handle unforseen cases
+* An actionable Code of Conduct, fit for a conference and in faith with the Rust Project's Code of Conduct.
+* A clear accessiblity statement, giving information about services in place and venue details, along with procedures to handle unforseen difficulties
 * A briefing for on-site staff on how to handle issues
 * A briefing for attendees on who to contact for handling issues
 
-The Rust project will assist in helping to pick these and give recommendations. It will provide interested conferences with ready-to-use material to ensure they don't need to work our things on their own all the time.
+The Rust project will assist in helping the conference develop its Code of Conduct, accessibility statement, and briefings for staff and attendees. It will provide interested conferences with ready-to-use material to ensure they don't need to work our things on their own all the time.
 
 ## Outreach
 
-Events working closely with the Rust project should do ample outreach towards underrepresented groups. The Rust project will assist in those efforts. It is important that this outreach happens before start of the submission phase, making sure that speaker diversity is reached through the normal submission process.
+Events working closely with the Rust project should do ample outreach towards underrepresented groups. The Rust project will assist in those efforts. It is important that this outreach happens before start of the talk submission phase, to help ensure that speaker diversity is reached through the normal submission process.
 
 ## Unified language
 
-To make sure the Rust project and the event in question can properly communicate and promote aspects of the conferences, a unified language is desierable. This is less about control, but to avoid miscommunications. It makes sure the same feature of all events is called the same. For (an admittendly mild) example, all conferences should call their CFP "Call for Proposals". This also makes sure that frictionless outreach can be done without having too much explaining about vocabulary.
+To make sure the Rust project and the event in question can properly communicate and promote aspects of the conferences, a unified language is desierable. This is not about control, but to avoid miscommunications. It makes sure the same feature of all events is called the same. For example, all conferences should call their CFP "Call for Proposals". This also makes sure that frictionless outreach can be done without having too much explaining about vocabulary.
 
 The Rust project will publish this wording as a living document.
 
@@ -79,7 +79,7 @@ This is at the discretion of the Rust project.
 
 Project partnerships should be renewed every year. In the interest of a growing community, this should be the moment to seek ways of improving over the last edition. The renewal should happen before the planning for a new event starts.
 
-For events that happen more frequently then yearly, a different mode can be discussed.
+For events that happen more frequently then yearly, a different renewal cycle can be discussed.
 
 ## Benefits for events
 
@@ -89,7 +89,7 @@ TODO: sum up how this makes it easier for the Rust project to promote everything
 
 ## Monetary support
 
-The Rust project cannot - at the moment - commit to monetary support. It will attempt that some costs directly stemming from the wishes of the Rust project - especially speaker costs - are covered.
+The Rust project cannot currently commit to providing monetary support. It will attempt that some costs directly stemming from the wishes of the Rust project - especially speaker costs - are covered.
 
 Monetary support can come either through the Rust project directly or through associated local funding organisations.
 
