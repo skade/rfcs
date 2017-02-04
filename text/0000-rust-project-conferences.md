@@ -64,7 +64,7 @@ It is highly recommendable that the event is ran through some kind of limited li
 
 ## Rust project involvement
 
-The Rust project needs to have some representation at the event. This gives attendees direct access to people that can showcase recent developments and future goals appropriately.
+The Rust project wishes to have some representation at the event. This gives attendees direct access to people that can showcase recent developments and future goals appropriately.
 
 To ensure this, both parties should talk early about a projects involvement at the event. This may include sending keynote speakers, normal speakers and masters of cermonies, or provide on-site assistance with topics important to the Rust project.
 
@@ -95,7 +95,7 @@ The Rust project will assist in helping to pick these and give recommendations. 
 
 ## Outreach
 
-Events working closely with the Rust project should do outreach towards underrepresented groups. The Rust project will assist in those efforts. It is important that this outreach happens before start of the submission phase, making sure that speaker diversity is reached through the normal submission process.
+Events working closely with the Rust project should do early outreach towards underrepresented groups. The Rust project will assist in those efforts. It is important that this outreach happens before start of the submission phase, making sure that speaker diversity is reached through the normal submission process.
 
 The Rust project will provide support in outreach efforts, but expects the event to actively approach relevant groups.
 
@@ -143,7 +143,7 @@ There's no documentation yet how events that don't meet those criteria will be f
 # Alternatives
 [alternatives]: #alternatives
 
-There would still be no rules for what's necessary to become an official Rust event.
+There would still be no guidelines under which events can contact the Rust team.
 
 # Unresolved questions
 [unresolved]: #unresolved-questions
