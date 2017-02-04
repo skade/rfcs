@@ -1,15 +1,19 @@
-- Feature Name: rust-conferences
-- Start Date: 2016-05-05
+- Feature Name: NA
+- Start Date: 2016-12-22
 - RFC PR: (leave this empty)
 - Rust Issue: (leave this empty)
 
 # Summary
 [summary]: #summary
 
-This RFC formulates base rules for conferences that want to be official Rust project conferences. This RFCs clarifies the expectations the Rust project has towards conferences taking part in an officially curated conference cycle and the benefits both sides can expect from the relationship. These efforts should be to the mutual benefit of the project, the event and - above all - attendees.
+This RFC formulates how the Rust project can support new and upcoming conferences in the Rust space.
+It tries to cover both offerings and the expectations. These efforts should be of mutual benefit
+of the project, the event and - above all - attendees.
 
 # Motivation
 [motivation]: #motivation
+
+Rust is in the lucky position of having thriving communities all around the globe. In the light of this, it makes sense to formulate better how the Rust project can support these communities, especially when they try to run larger events.
 
 The Rust project intends to provide as many people as possible with knowledge and insights about what is happening in Rust. For this, it intends to cooperate with organisations all over the world to organise conferences where people can get authoriative knowledge. This means that certain baseline conditions must be met to make sure the can be efficiently promoted and attendees can have a common expectation about them. The motivation of this RFC is to clarify them.
 
@@ -23,20 +27,20 @@ Common baseline expectations are:
 
 The Rust teams intend to support the conference organisers these offers.
 
-It is _not_ the intention of this RFC to standardize conferences, there will always be conferences focussed on specific topics or organised in a different fashion outside of this framework and the Rust project to support them to the extend possible.
+It is _not_ the intention of this RFC to standardise conferences, there will always be conferences focussed on specific topics or organised in a different fashion outside of this framework and the Rust project to support them to the extend possible.
 
 # Detailed design
 [design]: #detailed-design
 
 ## Contact
 
-Events interested as being official Rust project events should apply through a mail to the community team or the core team.
+Events interested in being supported by the Rust project events should apply through a mail to the community team or the core team.
 
 ## Rust project involvement
 
 The Rust project needs to have some representation at the conference. This gives attendees direct access to people that can showcase recent developments and future goals appropriately. The Rust project should also be consulted about the general guiding theme of the conference.
 
-To ensure this, one keynote slot should be kept free for a speaker to be assigned by the Rust project. If the topic of the talk is not keynote material (e.g. a very detailed explanation of a technical aspect), a talk slot of similar size should be reserved. The Rust project has to make a proposal for the slot. The event is free to deny the talk when it feels the proposal does not match the overall quality of the rest of the event. The Rust project is then free to send in additional proposals.
+To ensure this, one keynote slot should be kept free for a speaker to be assigned by the Rust project. If the topic of the talk is not keynote material (e.g. a very detailed explanation of a technical aspect), a talk slot of similar size should be reserved. The Rust project has to make a proposal for the slot. The event is free to deny the talk when the organisers feel the proposal does not match the overall quality of the rest of the event. The Rust project is then free to send in additional proposals.
 
 ## Content
 
@@ -44,7 +48,7 @@ Events on the official Rust project conference cycle should be accessible for at
 
 ## Training
 
-Depending on the size of an event, on-site trainings or spaces for projects to provide training is desireable. These should come at an affortable price.
+Depending on the size of an event, on-site trainings or spaces for projects to provide training are desireable. These should come at an affortable price.
 
 Outreach workshops should be for free.
 
@@ -62,6 +66,8 @@ The Rust project will assist in helping to pick these and give recommendations. 
 ## Outreach
 
 Events working closely with the Rust project should do ample outreach towards underrepresented groups. The Rust project will assist in those efforts. It is important that this outreach happens before start of the submission phase, making sure that speaker diversity is reached through the normal submission process.
+
+The Rust project will provide support in outreach efforts, but expects the conference to actively approach relevant groups.
 
 ## Unified language
 
@@ -93,6 +99,16 @@ The Rust project cannot - at the moment - commit to monetary support. It will at
 
 Monetary support can come either through the Rust project directly or through associated, local, funding organisations.
 
+## Naming
+
+Currently, the name RustConf is used by the Rust project for a conference run by Rust project directly. These events will be run regularly, with no fixed geographic location. The Rust core team will find an select the host of RustConf.
+
+The name RustFest is currently held by the European Rust community and is intended for more relaxed events with a relaxed schedule. The RustFest name should only be used after approaching the current team.
+
+Both brands are intended to be global.
+
+Finally, conferences using the name Rust in their name should be aware of the [Rust trademark policies](http://rust-lang.org/legal.html).
+
 # Drawbacks
 [drawbacks]: #drawbacks
 
@@ -116,6 +132,6 @@ The idea of expecting yearly improvements is taken from [RubyCentral's Community
 
 The idea that outreach must come before and during CFP for fairness is from [eurucamp's CFP learnings](http://blog.eurucamp.org/2013/05/27/end-of-eurucamp-cfp/)
 
-Examples of accessibility statements can be found [here](http://2015.eurucamp.org/accessibility/), [here](http://2016.bathruby.uk/information/index.html).
+Examples of accessibility statements can be found [here](http://2015.eurucamp.org/accessibility/), [here](http://2016.bathruby.uk/information/index.html) and [here](http://rustfest.eu/accessibility/)
 
-When it comes to staff procedures, Pycon's [staff procedures](https://us.pycon.org/2016/about/code-of-conduct/harassment-incidents-staff/) and [attendee procedures](https://us.pycon.org/2016/about/code-of-conduct/harassment-incidents/) are still the unbeaten reference
+When it comes to staff procedures, Pycon's [staff procedures](https://us.pycon.org/2016/about/code-of-conduct/harassment-incidents-staff/) and [attendee procedures](https://us.pycon.org/2016/about/code-of-conduct/harassment-incidents/) are still the unbeaten reference.
