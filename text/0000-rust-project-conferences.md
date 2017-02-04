@@ -46,7 +46,7 @@ Events interested in getting help from the Rust project should send a mail to th
 
 ## Benefits for events
 
-Events that got in touch with us can use the Rust projects infrastructure. This currently includes personal and monetary assistance, but can be expanded later on.
+Events that got in touch with us can use the Rust projects infrastructure. This currently includes advisory and monetary assistance, but can be expanded later on.
 
 The Rust project has ample access to people experienced in running small meetups to large international events. They can help newcomers in getting their event up and running and can advise how to get most things organised smoothly.
 
