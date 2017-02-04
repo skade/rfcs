@@ -86,7 +86,7 @@ Outreach workshops should be for free.
 
 Events that partner directly with the Rust project should have the following policies in place:
 
-* An actionable Code of Conduct, fit for a event and in faith with the Rust Projects Code of Conduct.
+* An actionable Code of Conduct, fit for a event and in faith with the [Rust Projects Code of Conduct](https://www.rust-lang.org/en-US/conduct.html).
 * A clear accessiblity statement, giving infos about services in place and venue details, along with procedures to handle unforseen cases.
 * A briefing for on-site staff on how to handle issues
 * A briefing for attendees on who to contact for handling issues
