@@ -125,7 +125,7 @@ There should be a written report of the conference after it happened. Feedback f
 
 ## Naming
 
-Currently, the name RustConf is used by the Rust project for a event run by Rust project directly. These events will be run regularly, with no fixed geographic location. The Rust core team will select the hosts of RustConf. Applications are taken, though.
+Currently, the name RustConf is used by the Rust project for a event run by Rust project directly. These events will be run regularly, with no fixed geographic location. The Rust core team will select the hosts of RustConf. (TODO: rust-core, please fill in if, or how, you want to be approached)
 
 The name RustFest is currently held by the European Rust community and is intended for more relaxed events with a schedule that gives people time to meet each other. The RustFest name should only be used after approaching the current team. The RustFest team is open to applications.
 
