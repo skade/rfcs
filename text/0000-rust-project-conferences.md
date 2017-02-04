@@ -34,7 +34,7 @@ It is _not_ the intention of this RFC to standardise conferences, there will alw
 
 ## Contact
 
-Events interested in being supported by the Rust project events should apply through a mail to the community team or the core team.
+Events interested as being official Rust project events should apply through a mail to the [community team](mailto:community-team@rust-lang.org) or the [core team](mailto:core-team@rust-lang.org).
 
 ## Rust project involvement
 
@@ -124,7 +124,9 @@ There would still be no rules for what's necessary to become an official Rust co
 # Unresolved questions
 [unresolved]: #unresolved-questions
 
-What parts of the design are still TBD?
+Should we have opinions on pricing?
+
+Who would handle disagreements?
 
 # Acknowledegements
 
@@ -135,3 +137,4 @@ The idea that outreach must come before and during CFP for fairness is from [eur
 Examples of accessibility statements can be found [here](http://2015.eurucamp.org/accessibility/), [here](http://2016.bathruby.uk/information/index.html) and [here](http://rustfest.eu/accessibility/)
 
 When it comes to staff procedures, Pycon's [staff procedures](https://us.pycon.org/2016/about/code-of-conduct/harassment-incidents-staff/) and [attendee procedures](https://us.pycon.org/2016/about/code-of-conduct/harassment-incidents/) are still the unbeaten reference.
+
