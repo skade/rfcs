@@ -37,7 +37,9 @@ We propose an additional error style that represents an inbetween of the existin
 # Guide-level explanation
 [guide-level-explanation]: #guide-level-explanation
 
-The new error messages of `rustc` all follow a familiar structure, which makes them easy to follow. They do away with the notation-heavy structure that JSON exposes, though.
+Beyond the classic error styles (`human`, `short` and `json`), `rustc` also provides you with a unique error style: `verbal`. It strikes a balance between being pleasing to read, familiar and also easier to read. They do away with the short notation generally used by many compilers.
+
+For example, the error message for missing `Debug` implementation is:
 
 ```
 You asked me to `Debug` a `Foo`
@@ -47,38 +49,109 @@ it's really that simple,
 I'll leave the debugging to you.
 ```
 
+The messages are especially useful in office environments, as they can be fluently read out to colleagues.
+
+The error style is currently experimental, but we inted to write an extensive [collection of error messages and how to read them](https://books.google.de/books?hl=de&lr=&id=nFdOG5JxWZoC&oi=fnd&pg=PR9&dq=limericks+&ots=m1kV6ZKSFa&sig=2wAwaTDapYnj01S1IqujQL_z85M#v=onepage&q=limericks&f=false).
+
 
 # Reference-level explanation
 [reference-level-explanation]: #reference-level-explanation
 
-This is the technical portion of the RFC. Explain the design in sufficient detail that:
+User-research has shown that while our error messages are great to read, they are hard to share. Especially in office environments, errors are often read
+out loudly, leading to communication problems:
 
-- Its interaction with other features is clear.
-- It is reasonably clear how the feature would be implemented.
-- Corner cases are dissected by example.
+Consider the following program:
 
-The section should return to the examples given in the previous section, and explain more fully how the detailed proposal makes those examples work.
+```rust
+fn main() {
+    let mut vec = vec![1,2,3];
+
+    let foo = &vec[2];
+
+    // copious amount of work
+
+    vec[1] = 2;
+}
+```
+
+Which emits:
+
+```
+error[E0502]: cannot borrow `vec` as mutable because it is also borrowed as immutable
+ --> src/main.rs:8:5
+  |
+4 |     let foo = &vec[2];
+  |                --- immutable borrow occurs here
+...
+8 |     vec[1] = 2;
+  |     ^^^ mutable borrow occurs here
+9 | }
+  | - immutable borrow ends here
+```
+
+While very clear, issues arise: verbalising this to a colleague requires the user to reassemble 4 messages and 2 snippets into fluid sentences. In these contexts, we can do better.
+
+Sticking to Rust tradition of combining old and new approaches, we came up with an error format that is easy to write, easy to read and easy to communicate. Indeed, in this case, the applied base technique is roughly 500 years old.
+
+2 lines are used for context, then 2 lines for explaining the core problem and one line to circle connecting to the first two lines, so that human readers have a sense of closure. Additionally, the last line acts as a "call to action", a best practice on the web.
+
+It thus combines the ancient form of a limerick rhyme with techniques from modern web design.
+
+The above error would read:
+
+```
+That `vec` which you wanted to borrow
+Is giving my checker much sorrow
+for meanwhile you mutate
+it in line eight
+let's fix it until tomorrow!
+```
+
+User tests on the #rustallhands have yielded positive results.
+
+As an additionally, we finally establish compatibility with `say(1)`.
 
 # Drawbacks
 [drawbacks]: #drawbacks
 
 Why should we *not* do this?
 
+How is that even a question?
+
 # Rationale and alternatives
 [alternatives]: #alternatives
 
 - Why is this design the best in the space of possible designs?
+
+While other rhyme forms exists, Limericks are easy and simple.
+
 - What other designs have been considered and what is the rationale for not choosing them?
+
+
+
 - What is the impact of not doing this?
+
+Sad faces all around.
 
 # Prior art
 [prior-art]: #prior-art
 
 [Shakespeare](http://shakespearelang.sourceforge.net/)
+[llogiq](https://twitter.com/llogiq)
 
 # Unresolved questions
 [unresolved]: #unresolved-questions
 
-- What parts of the design do you expect to resolve through the RFC process before this gets merged?
-- What parts of the design do you expect to resolve through the implementation of this feature before stabilization?
-- What related issues do you consider out of scope for this RFC that could be addressed in the future independently of the solution that comes out of this RFC?
+-- What parts of the design do you expect to resolve through the RFC process before this gets merged?
+
+I hope that someone can find a better explanation what the aabba-structure of the limericks represents.
+
+-- What parts of the design do you expect to resolve through the implementation of this feature before stabilization?
+
+Many error messages will need to be ported. We believe a concerted community action will help fill the gaps quickly. Currently, only E502 and E0277 are ported.
+
+This can be a community effort.
+
+-- What related issues do you consider out of scope for this RFC that could be addressed in the future independently of the solution that comes out of this RFC?
+
+Puns.
