@@ -156,6 +156,7 @@ Sad faces all around.
 [prior-art]: #prior-art
 
 [Shakespeare](http://shakespearelang.sourceforge.net/)
+
 [llogiq](https://twitter.com/llogiq)
 
 [lexlohr, a clone of llogiq](https://twitter.com/lexlohr)
@@ -188,3 +189,7 @@ This can be a community effort.
 Puns.
 
 Integration into Ember is desireable, maybe under the name of Glimmerick?
+
+## Thanks
+
+To @badboy and @llogiq by helping out with this RFC!
