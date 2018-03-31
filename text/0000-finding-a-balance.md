@@ -51,7 +51,7 @@ I'll leave the debugging to you.
 
 The messages are especially useful in office environments, as they can be fluently read out to colleagues.
 
-The error style is currently experimental, but we inted to write an extensive [collection of error messages and how to read them](https://books.google.de/books?hl=de&lr=&id=nFdOG5JxWZoC&oi=fnd&pg=PR9&dq=limericks+&ots=m1kV6ZKSFa&sig=2wAwaTDapYnj01S1IqujQL_z85M#v=onepage&q=limericks&f=false).
+The error style is currently experimental, but we intend to write an extensive [collection of error messages and how to read them](https://books.google.de/books?hl=de&lr=&id=nFdOG5JxWZoC&oi=fnd&pg=PR9&dq=limericks+&ots=m1kV6ZKSFa&sig=2wAwaTDapYnj01S1IqujQL_z85M#v=onepage&q=limericks&f=false).
 
 
 # Reference-level explanation
@@ -148,6 +148,10 @@ While other rhyme forms exists, Limericks are easy and simple.
 
 - What other designs have been considered and what is the rationale for not choosing them?
 
+Haiku have been attempted. While some current messages already fit into this form, others are very hard to fit into the limited syllables. In addition, the traditional form requires references to a season, which does not really fit well for an error message.
+
+Shakespeare-style ABAB rhymes may possibly face legal troubles from the programming language of the same name.
+
 - What is the impact of not doing this?
 
 Sad faces all around.
@@ -159,7 +163,7 @@ Sad faces all around.
 
 [llogiq](https://twitter.com/llogiq)
 
-[lexlohr, a clone of llogiq](https://twitter.com/lexlohr)
+[@lexlohr, a clone of llogiq](https://twitter.com/lexlohr)
 
 # Unresolved questions
 [unresolved]: #unresolved-questions
