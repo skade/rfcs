@@ -109,7 +109,28 @@ let's fix it until tomorrow!
 
 User tests on the #rustallhands have yielded positive results.
 
-As an additionally, we finally establish compatibility with `say(1)`.
+Additionally, we finally establish compatibility with `say(1)`.
+
+## Examples of further errors
+
+No error number:
+```
+An open parenthesis at
+line ten in `http://foo.rs` had
+no partner to close
+it, I would say those
+lines are syntactically bad.
+```
+
+E0596:
+
+```
+The value `z` which you mutate
+at line four hundred five does negate
+Your code otherwise good
+is missing a `mut`
+So add it before it's too late.
+```
 
 # Drawbacks
 [drawbacks]: #drawbacks
@@ -127,8 +148,6 @@ While other rhyme forms exists, Limericks are easy and simple.
 
 - What other designs have been considered and what is the rationale for not choosing them?
 
-
-
 - What is the impact of not doing this?
 
 Sad faces all around.
@@ -139,6 +158,8 @@ Sad faces all around.
 [Shakespeare](http://shakespearelang.sourceforge.net/)
 [llogiq](https://twitter.com/llogiq)
 
+[lexlohr, a clone of llogiq](https://twitter.com/lexlohr)
+
 # Unresolved questions
 [unresolved]: #unresolved-questions
 
@@ -146,9 +167,13 @@ Sad faces all around.
 
 I hope that someone can find a better explanation what the aabba-structure of the limericks represents.
 
+This RFC currently relies on a sole limerick author, which hopefully advances in cloning technology - kicked off by this RFC - will fix in the near future.
+
+Alternatively, funding from Mozilla or the community for a full-time limerick working groups is an alternative.
+
 -- What parts of the design do you expect to resolve through the implementation of this feature before stabilization?
 
-Many error messages will need to be ported. We believe a concerted community action will help fill the gaps quickly. Currently, only E502 and E0277 are ported.
+Many error messages will need to be ported. We believe a concerted community action will help fill the gaps quickly. Currently, only E502, E0277, E0596 and a parse error are ported.
 
 This can be a community effort.
 
