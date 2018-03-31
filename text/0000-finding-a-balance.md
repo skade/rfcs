@@ -30,9 +30,9 @@ While this form is visually pleasing, it also suffers from some problems: many e
 
 Users interested in a more structured approach might reach for `json` here, only to figure out that the format is consistent, but far too verbose.
 
-`short` might be perceived as too short, though, as there's almost no additional context other then the error message.
+Reading them out aloud is also a pain, and leads to inconsistencies. `short` would be useful for that case, though, as there's almost no additional context other then the error message.
 
-We propose an additional error style that represents an inbetween of the existing approaches. It strikes a balance between structure, human-readability and CLI brevity. Also, it follows Rusts tradition of using ideas from the past to implement the tooling of the future.
+We propose an additional error style that represents an inbetween of the existing approaches. It strikes a balance between structure, human-readability and CLI brevity. Additionally, it allows downstream consumption through other tools. Also, it follows Rusts tradition of using ideas from the past to implement the tooling of the future.
 
 # Guide-level explanation
 [guide-level-explanation]: #guide-level-explanation
@@ -170,6 +170,12 @@ I hope that someone can find a better explanation what the aabba-structure of th
 This RFC currently relies on a sole limerick author, which hopefully advances in cloning technology - kicked off by this RFC - will fix in the near future.
 
 Alternatively, funding from Mozilla or the community for a full-time limerick working groups is an alternative.
+
+We also hope finding new interaction patterns with other software, for example, a helpful Alexa skill could be developed and addressed as simply as:
+
+```
+echo "Alexa, `cargo build --message-format=verbal`" | say
+```
 
 -- What parts of the design do you expect to resolve through the implementation of this feature before stabilization?
 
