@@ -180,3 +180,5 @@ This can be a community effort.
 -- What related issues do you consider out of scope for this RFC that could be addressed in the future independently of the solution that comes out of this RFC?
 
 Puns.
+
+Integration into Ember is desireable, maybe under the name of Glimmerick?
