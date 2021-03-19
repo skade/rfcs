@@ -11,85 +11,63 @@ Extend `Cargo.toml` with a field that declares additional licenses that need to 
 # Motivation
 [motivation]: #motivation
 
-Why are we doing this? What use cases does it support? What is the expected outcome?
+It is legal and common to write wrapping libraries around other libraries that have a different, but compatible, license. There's multiple legitimate motivations for that, among them the ability to exchange the wrapped library for another one later while staying aligned with the license of library clients. In general, Cargo makes it easy to stay compliant as a user, by reading crates metadata. This does not extend to situations where a crate binds to one or multiple libraries from other ecosystems, for example static or dynamic libraries. The form of binding does not matter, as many licenses express expectations on _distribution_ of the final program.
 
 # Guide-level explanation
 [guide-level-explanation]: #guide-level-explanation
 
-Explain the proposal as if it was already included in the language and you were teaching it to another Rust programmer. That generally means:
 
-- Introducing new named concepts.
-- Explaining the feature largely in terms of examples.
-- Explaining how Rust programmers should *think* about the feature, and how it should impact the way they use Rust. It should explain the impact as concretely as possible.
-- If applicable, provide sample error messages, deprecation warnings, or migration guidance.
-- If applicable, describe the differences between teaching this to existing Rust programmers and new Rust programmers.
+For complex cases, Cargo manifests provides additional fields for licensing information. These are useful for example if you bind to one of multiple libraries that Cargo does not see as dependencies and not access metadata for. Both are subfields of a `licensing` field. The `licensing` section also provides a `license` field that acts as the top-level `license` if present. Both using `licensing.license` and `license` is an error.
 
-For implementation-oriented RFCs (e.g. for compiler internals), this section should focus on how compiler contributors should think about the change, and give examples of its concrete impact. For policy RFCs, this section should provide an example-driven introduction to the policy, and explain its impact in concrete terms.
+* `licensing.additional`: An key value element that describes additional licenses to be taken into account. The key is the common name of the license bound to, the value a K/V element with the `license` and `optional` fields. `license` is an SPDX identifiers, `optional` describes if a license can be ignored in some cases.
 
+* `comment`: A free form string to describe additional licensing detail. This can be useful if e.g. a library can bind to multiple backends of different licenses and a choice exists. This field should only be used if really necessary, as audit software is recommended to trigger a manual review.
+
+Example:
+
+```toml
+[licensing]
+license = "MIT"
+comment = "When using the `native-backtrace` feature, you need to also comply with the libbacktrace license"
+[licensing.additional]
+libbacktrace = { license: "BSD-3-Clause", optional = true }
+```
 # Reference-level explanation
 [reference-level-explanation]: #reference-level-explanation
 
-This is the technical portion of the RFC. Explain the design in sufficient detail that:
 
-- Its interaction with other features is clear.
-- It is reasonably clear how the feature would be implemented.
-- Corner cases are dissected by example.
+The two fields `licenses.additional` and `licenses.comment` are added to Cargo as plain metadata fields. They require the presence of a `license` field. Both fields will not be warned against if they are missing.
 
-The section should return to the examples given in the previous section, and explain more fully how the detailed proposal makes those examples work.
+Cargo only checks those fields for structural validity, but does not further use them. Tools like `cargo-license` are encouraged to present this data alongside with the normal licensing data and highlight if a comment is present.
 
 # Drawbacks
 [drawbacks]: #drawbacks
 
-Why should we *not* do this?
+This proposal tries to strike a balance between ease of use and information, but for that reason e.g. lacks
+the ability to declare certain licenses only if certain features are activated.
+
+This proposal adds an additional stuctured data section to `Cargo.toml`, seperate from the general `license` field
+in itself and partially superseding it.
 
 # Rationale and alternatives
 [rationale-and-alternatives]: #rationale-and-alternatives
 
-- Why is this design the best in the space of possible designs?
-- What other designs have been considered and what is the rationale for not choosing them?
-- What is the impact of not doing this?
+
+* We could just add 2 optional fields to the top-level.
 
 # Prior art
 [prior-art]: #prior-art
 
-Discuss prior art, both the good and the bad, in relation to this proposal.
-A few examples of what this can include are:
 
-- For language, library, cargo, tools, and compiler proposals: Does this feature exist in other programming languages and what experience have their community had?
-- For community proposals: Is this done by some other community and what were their experiences with it?
-- For other teams: What lessons can we learn from what other communities have done here?
-- Papers: Are there any published papers or great posts that discuss this? If you have some relevant papers to refer to, this can serve as a more detailed theoretical background.
-
-This section is intended to encourage you as an author to think about the lessons from other languages, provide readers of your RFC with a fuller picture.
-If there is no prior art, that is fine - your ideas are interesting to us whether they are brand new or if it is an adaptation from other languages.
-
-Note that while precedent set by other languages is some motivation, it does not on its own motivate an RFC.
-Please also take into consideration that rust sometimes intentionally diverges from common language features.
+Perl CPAN modules declare that multiple licenses being named in their licenses field should be interpreted as "consult the documentation for interpretation" (https://perldoc.perl.org/CPAN::Meta::Spec#license).
 
 # Unresolved questions
 [unresolved-questions]: #unresolved-questions
 
-- What parts of the design do you expect to resolve through the RFC process before this gets merged?
-- What parts of the design do you expect to resolve through the implementation of this feature before stabilization?
-- What related issues do you consider out of scope for this RFC that could be addressed in the future independently of the solution that comes out of this RFC?
+* It may be possible to warn against these fields if `build.rs` is present, as it is often used for compiling external libraries.
+* The names and exact formats are very much bikesheds.
 
 # Future possibilities
 [future-possibilities]: #future-possibilities
 
-Think about what the natural extension and evolution of your proposal would
-be and how it would affect the language and project as a whole in a holistic
-way. Try to use this section as a tool to more fully consider all possible
-interactions with the project and language in your proposal.
-Also consider how this all fits into the roadmap for the project
-and of the relevant sub-team.
-
-This is also a good place to "dump ideas", if they are out of scope for the
-RFC you are writing but otherwise related.
-
-If you have tried and cannot think of any future possibilities,
-you may simply state that you cannot think of anything.
-
-Note that having something written down in the future-possibilities section
-is not a reason to accept the current or a future RFC; such notes should be
-in the section on motivation or rationale in this or subsequent RFCs.
-The section merely provides additional information.
+The introduction of a `license` section allows for further extension.
